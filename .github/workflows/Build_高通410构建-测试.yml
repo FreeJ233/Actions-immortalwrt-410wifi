@@ -29,7 +29,7 @@ on:
 
 
 env:
-  CONFIG_FILE: "config/040.config"
+  CONFIG_FILE: "o/jz02v10.config"
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
