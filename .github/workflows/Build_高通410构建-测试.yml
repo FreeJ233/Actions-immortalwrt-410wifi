@@ -1,4 +1,4 @@
-name: Build_高通410-测试
+name: Build_高通410构建-测试
 
 permissions:
   contents: write
@@ -30,8 +30,8 @@ on:
 
 env:
   CONFIG_FILE: "config/040.config"
-  REPO_URL: https://github.com/istoreos/istoreos
-  REPO_BRANCH: istoreos-24.10
+  REPO_URL: https://github.com/openwrt/openwrt
+  REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   DIY_P5_SH: diy-part5.sh
   UPLOAD_FIRMWARE: true
