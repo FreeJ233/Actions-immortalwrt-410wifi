@@ -19,7 +19,8 @@ git clone https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCP
 # luci-app-mmconfig
 git clone https://github.com/xuxin1955/luci-app-mmconfig package/luci-app-mmconfig
 
-
+# luci-app-daed
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
 
 
 
