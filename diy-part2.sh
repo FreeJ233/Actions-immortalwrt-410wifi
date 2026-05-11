@@ -20,7 +20,14 @@ git clone https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCP
 git clone https://github.com/xuxin1955/luci-app-mmconfig package/luci-app-mmconfig
 
 # luci-app-daed
-git clone https://github.com/iii80/luci-app-daed package/dae
+# 1. 先删掉可能存在的旧版本（有些源码里可能叫 luci-app-daed 或 daed）
+rm -rf feeds/luci/applications/luci-app-daed
+rm -rf package/feeds/luci/luci-app-daed
+rm -rf package/dae  # 如果你之前克隆过，也先删掉
+
+# 2. 按照官方推荐克隆到 package/dae
+git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/dae
+
 
 
 
