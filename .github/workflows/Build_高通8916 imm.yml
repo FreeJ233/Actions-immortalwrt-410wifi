@@ -37,8 +37,7 @@ on:
 
 env:
   REPO_URL: https://github.com/xuxin1955/immortalwrt
-# REPO_BRANCH: master
-  REPO_BRANCH: openwrt-25.12
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: ${{ format('config/{0}.config', github.event.inputs.profile) }}
   DIY_P1_SH: diy-part1.sh
