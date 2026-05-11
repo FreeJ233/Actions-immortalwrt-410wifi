@@ -31,7 +31,7 @@ on:
           - wf2
           - sp970v11
           - sp970v10
-        default: jz02v10
+        default: w001
         required: true
 
 
