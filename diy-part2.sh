@@ -28,6 +28,21 @@ rm -rf package/dae  # 如果你之前克隆过，也先删掉
 # 2. 按照官方推荐克隆到 package/dae
 git clone --depth 1 https://github.com/QiuSimons/luci-app-daed package/dae
 
+# 自动注入 daed 所需的内核与插件配置
+echo 'CONFIG_KERNEL_DEBUG_INFO=y' >> .config
+echo 'CONFIG_KERNEL_DEBUG_INFO_BTF=y' >> .config
+echo 'CONFIG_KERNEL_CGROUPS=y' >> .config
+echo 'CONFIG_KERNEL_CGROUP_BPF=y' >> .config
+echo 'CONFIG_PACKAGE_luci-app-daed=y' >> .config
+echo 'CONFIG_PACKAGE_daed=y' >> .config
+echo 'CONFIG_PACKAGE_kmod-xdp-sockets-diag=y' >> .config
+
+# 修复依赖问题（强制让编译系统检查依赖）
+make defconfig
+
+./scripts/feeds update -a
+./scripts/feeds install -a
+
 
 
 
